@@ -43,7 +43,7 @@ The output should be
 ```json
 {
   "res": "Found API",
-  "house_price_prediction": 8755880.38638432,
+  "Non_loan_prediction": 1,
   "status_code": 200
 }
 ```
