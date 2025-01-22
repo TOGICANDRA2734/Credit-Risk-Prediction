@@ -1,0 +1,70 @@
+dataset_filename: loan_default.csv  
+dataset_dump_path: 
+  raw: data/raw/
+  interim: data/interim/
+  processed: data/processed/
+target_col: loan_status  
+int64_columns:
+- person_age
+- person_income
+- loan_amnt
+- cb_person_cred_hist_length
+- person_emp_length
+object_columns:
+- person_home_ownership
+- loan_intent
+- loan_grade
+- cb_person_default_on_file
+# - person_emp_length
+# - loan_int_rate
+# - loan_percent_income
+value_home_ownership_status:
+- "RENT"
+- "OWN"
+- "MORTGAGE"
+- "OTHER"
+value_loan_intent_status:
+- "PERSONAL"
+- "EDUCATION"
+- "MEDICAL"
+- "VENTURE"
+- "HOMEIMPROVEMENT"
+- "DEBTCONSOLIDATION"
+value_loan_grade_status:
+- "A"
+- "B"
+- "C"
+- "D"
+- "E"
+- "F"
+- "G"
+value_status:
+- "Y"
+- "N"
+label_encoder_columns:
+- cb_person_default_on_file  
+ohe_columns:
+- loan_grade  
+- person_home_ownership
+- loan_intent
+feature_num_columns:
+- person_age
+- person_income
+- person_emp_length
+- loan_amnt
+- loan_int_rate
+- loan_percent_income
+- cb_person_cred_hist_length
+model_dump_path: models/
+features:
+- person_age
+- person_income
+- person_emp_length
+- loan_amnt
+- loan_int_rate
+- loan_percent_income
+- cb_person_cred_hist_length
+- person_home_ownership
+- loan_intent
+- loan_grade
+- cb_person_default_on_file
